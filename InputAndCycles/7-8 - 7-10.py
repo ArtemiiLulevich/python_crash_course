@@ -31,7 +31,7 @@
 ##for sandwich in finished_sandwiches:
 ##    print(sandwich, end=' ')
 
-#7-10
+# 7-10
 
 num_of_persons = input('Enter number of persons: ')
 data = {}
