@@ -162,7 +162,7 @@
 ##iceCream_stand = IceCreamStand('Bom-Bom', 'Icecream')
 ##iceCream_stand.iceCream_list()
 
-#9-7 - 9-8
+# 9-7 - 9-8
 
 class User():
     """Simple user model"""
@@ -176,14 +176,11 @@ class User():
     def describe_user(self):
         print("{} {}, age {}".format(self.last_name, self.first_name, self.age))
 
-
     def greet_user(self):
         print("Hello, {}!".format(self.first_name))
 
-
     def increment_login_attempts(self):
         self.login_attempts += 1
-
 
     def reset_login_attempts(self):
         self.login_attempts = 0
@@ -196,12 +193,10 @@ class Admin(User):
         self.privileges = Privileges()
 
 
-
 class Privileges():
     """Simple privilages class"""
     def __init__(self, delete=False, add=True, ban=False):
         self.privileges = {'delete_users' : delete, 'add_post' : add, 'ban_users' : ban}
-
 
     def show_privileges(self):
         print('Admin can: ')
