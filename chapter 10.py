@@ -42,3 +42,62 @@ with open(file_name, 'a') as file_object:
         print('Hello {}!'.format(guest_name))
         guest_name += '\n'
         file_object.write(guest_name)
+
+# 10-6
+
+##while True:
+##    print("Enter two numbers to see sum. Enter q to exit.")
+##
+##    a = input('Enter first number: ')
+##    if a.lower() == 'q':
+##        break
+##    b = input('Enter second number: ')
+##    if b.lower() == 'q':
+##        break
+##    
+##    try:
+##        son = int(a) + int(b)
+##    except ValueError:
+##        print('One of the numbers is a letter')
+##    else:
+##        print('Sum is {}'.format(son))
+
+#10-8
+
+##def animals(filename):
+##    try:
+##        with open(filename) as file_obj:
+##            line = file_obj.readline()
+##            while line:
+##                print(line, end='')
+##                line = file_obj.readline()
+##            print('\n')
+##    except FileNotFoundError:
+##        pass
+####        msg = 'File {} not found'.format(filename)
+####        print(msg)
+##
+##files = ['cats.txt', 'dogs.txt']
+##for file in files:
+##    animals(file)
+
+#10-10
+
+def count_of_words(filename, word):
+    try:
+        with open(filename) as file_obj:
+            contents = file_obj.read()
+    except FileNotFoundError:
+        msg = 'File {} not found'.format(filename)
+        print(msg)
+    else:
+        # count_of_words = contents.lower().count(word.lower())
+        list_of_words = contents.split()
+        len_of_book = len(list_of_words)
+        # print("Count of word '{}' in  file {}: {}".format(word, filename, count_of_words))
+        print("{} - {}".format(filename, len_of_book))
+
+files = ['Dracula.txt', 'Iliad.txt']
+for file in files:
+    count_of_words(file, '')
+
