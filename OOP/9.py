@@ -163,8 +163,7 @@
 ##iceCream_stand.iceCream_list()
 
 # 9-7 - 9-8
-
-class User():
+class User:
     """Simple user model"""
 
     def __init__(self, first_name, last_name, age = 18):
@@ -193,8 +192,8 @@ class Admin(User):
         self.privileges = Privileges()
 
 
-class Privileges():
-    """Simple privilages class"""
+class Privileges:
+    """Simple privileges class"""
     def __init__(self, delete=False, add=True, ban=False):
         self.privileges = {'delete_users' : delete, 'add_post' : add, 'ban_users' : ban}
 
